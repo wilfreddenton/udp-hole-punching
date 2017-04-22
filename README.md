@@ -24,9 +24,14 @@ go get github.com/wilfreddenton/udp-hole-punching
 
 The main package is the rendezvous server. Find a VPS or something to host it on. You can run everything locally but it won't really be testing whether or not hole punching works because it's on the same machine. Make sure that the server has TCP and UDP ports open to incoming traffic from 0-65535.
 
+To run it:
+
+1. `go install`
+2. udp-hole-punching
+
 ### 2. Adjust UI settings
 
-There are two UIs that you can use `gui` which is a web UI and `term-ui` which is a terminal UI.
+There are two UIs that you can use `gui` which is a web UI and `term-ui` which is a terminal UI. You can use any combination of UIs.
 
 Before you use one you should open the `main.go` file and switch the `serverTCPIP` and `serverUDPIP` constants to the IP address of your rendezvous server (no port).
 
@@ -36,8 +41,8 @@ To run the web UI
 2. `npm install`
 3. `npm run build`
 4. `cd ..`
-5. `go build`
-6. `gui` or `./gui`
+5. `go install`
+6. `gui` if your rendezvous server is running on locally or `gui -serverIP=<server IP here>`
 7. point your browser to `localhost:8000`
 
 To disconnect and start a new chat simply refresh.
@@ -45,8 +50,8 @@ To disconnect and start a new chat simply refresh.
 To run the terminal UI
 
 1. `cd term-ui`
-2. `go build`
-3. `term-ui` or `./term-ui`
+2. `go install`
+3. `term-ui` if your rendezvouse server is running locally `term-ui -serverIP=<server IP here>`
 
 To disconnect and start a new chat `ctrl-c` to exit the program and run it again.
 
