@@ -1,7 +1,7 @@
 <template>
   <div id="chat-bar">
     <form @submit.prevent="onSubmit">
-      <textarea @focusin="onFocusIn" @focusout="onFocusOut" @keydown.shift.13="send" ref="textarea" rows="1" placeholder="message" type="text" v-model="text" ></textarea>
+      <textarea @focusin="onFocusIn" @focusout="onFocusOut" @keydown="onKeyDown" ref="textarea" rows="1" placeholder="message" type="text" v-model="text" ></textarea>
     </form>
   </div>
 </template>
@@ -35,9 +35,13 @@ export default {
         autosize.update(this.$refs.textarea)
       })
     },
-    send (e) {
-      e.preventDefault()
-      this.onSubmit()
+    onKeyDown (e) {
+      if (e.keyCode === 13) {
+        if (!e.shiftKey) {
+          e.preventDefault()
+          this.onSubmit()
+        }
+      }
     }
   },
   computed: {

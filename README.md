@@ -2,9 +2,15 @@
 
 Yusuke punches a hole right through your NAT
 
-![spirit punch](http://i.imgur.com/ZwBpD0a.jpg)
+![udp-hole-punching](http://i.imgur.com/ZwBpD0a.jpg)
 
 **Disclaimer**: This is not a production ready chat application. While it does create AES encrypted connections `client <-> client` and `client <-> server`, this code has not been audited or tested by any security specialists. This is simply an exercise for me to learn more about P2P networking and technologies as well as provide some examples of the technologies in use for others who are interested in learning. Additionally, the udp client does not implement a protocol that ensures the successful delivery of messages and so some will be lost over spotty connections.
+
+## Preview
+
+[![preview](http://i.imgur.com/YF7TMBH.png)](https://youtu.be/FHZ-oEfpi9k)
+
+Click the above image to watch a youtube video of the chat app in action.
 
 ## Install
 
@@ -54,7 +60,7 @@ Run the clients and provide the PeerID of one client to the other client and if 
 
 ## Architecture
 
-![spirit punch architecture](http://i.imgur.com/dZNEhpw.png)
+![udp-hole-punching architecture](http://i.imgur.com/dZNEhpw.png)
 
 1. Both clients register themselves using their ID with the rendezvous server
 2. Client A makes an "establish" request to the rendezvous server sending the `ID` of the peer it would like to being communicating with
