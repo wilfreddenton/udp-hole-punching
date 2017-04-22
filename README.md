@@ -10,7 +10,7 @@ Yusuke punches a hole right through your NAT
 
 [![preview](http://i.imgur.com/YF7TMBH.png)](https://youtu.be/FHZ-oEfpi9k)
 
-Click the above image to watch a youtube video of the chat app in action.
+Click the above image to watch a youtube video of the chat app in action. The terminal in the top right hand corner is SSHed into a VPS which runs the rendezvous server. The terminal in the bottom right is the terminal UI. The web app on the left is the GUI.
 
 ## Install
 
