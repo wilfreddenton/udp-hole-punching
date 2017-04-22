@@ -1,0 +1,8 @@
+.DS_Store
+term-ui/history-*.txt
+term-ui/log*.txt
+term-ui/term-ui
+gui/history-*.txt
+gui/log*.txt
+gui/gui
+udp-hole-punching
